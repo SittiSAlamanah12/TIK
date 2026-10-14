@@ -1,0 +1,6 @@
+{
+  "name": "belajarBarengSitty - Portal Pembelajaran TIK SMA",
+  "description": "Platform pembelajaran TIK kelas 10, 11, dan 12 SMA dengan simulator jaringan interaktif, materi video 3D, kuis, manajemen tugas guru, forum diskusi, dan ruang chat kelompok.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
