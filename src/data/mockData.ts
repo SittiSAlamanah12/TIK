@@ -38,6 +38,82 @@ export const TEACHER_PROFILE: UserProfile = {
 
 export const CONCEPTS_3D: Concept3D[] = [
   {
+    id: 'c3d_binary',
+    title: 'Arsitektur Gerbang Logika & Register Bilangan Biner',
+    subtitle: 'Materi Kelas 7 · Berpikir Komputasional & Sistem Bilangan (BK-SK)',
+    grade: '7',
+    image: '/src/assets/images/tik_computer_hardware_3d_1791939792442.jpg',
+    description: 'Eksplorasi representasi data digital dalam komputer: saklar bit biner 0 dan 1, gerbang logika dasar (AND, OR, NOT), register penyimpanan 8-bit (Byte), serta konversi ke Oktal dan Heksadesimal.',
+    hotspots: [
+      {
+        id: 'hs_bit_reg',
+        label: 'Register Data 8-Bit (Byte)',
+        x: 48,
+        y: 40,
+        details: 'Unit memori tercepat yang menyimpan 8 buah nilai biner (bit). Setiap bit memiliki bobot nilai tempat kelipatan pangkat 2 (128, 64, 32, 16, 8, 4, 2, 1).'
+      },
+      {
+        id: 'hs_logic_gate',
+        label: 'Gerbang Logika Transistor (Logic Gates)',
+        x: 64,
+        y: 35,
+        details: 'Sirkuit semikonduktor mikro yang mengeksekusi operasi Boolean dasar seperti AND, OR, NOT, dan XOR untuk melakukan kalkulasi biner.'
+      },
+      {
+        id: 'hs_nibble_hex',
+        label: 'Pengelompokan 4-Bit (Nibble Heksadesimal)',
+        x: 34,
+        y: 60,
+        details: 'Setiap 4 digit biner dikelompokkan menjadi 1 digit Heksadesimal (0-F) untuk menyederhanakan pembacaan kode mesin dan alamat memori.'
+      },
+      {
+        id: 'hs_data_bus',
+        label: 'Jalur Bus Data Biner Paralel',
+        x: 52,
+        y: 72,
+        details: 'Jalur kabel konduktif mikro yang menghantarkan sinyal tegangan tinggi (Logika 1) dan tegangan rendah (Logika 0) secara serempak.'
+      }
+    ]
+  },
+  {
+    id: 'c3d_stack',
+    title: 'Struktur Data Stack (LIFO) & Call Stack Memori',
+    subtitle: 'Materi Kelas 8 · Algoritma & Struktur Data (AD)',
+    grade: '8',
+    image: '/src/assets/images/tik_hero_concept_1791939790274.jpg',
+    description: 'Struktur data linear bertumpuk dengan prinsip LIFO (Last In First Out). Digunakan secara luas dalam fungsi rekursif, tombol Undo/Redo, pemanggilan fungsi sistem (Call Stack), dan evaluasi operasi ekspresi matematika Postfix.',
+    hotspots: [
+      {
+        id: 'hs_stack_top',
+        label: 'Pointer Elemen TOP Stack',
+        x: 50,
+        y: 28,
+        details: 'Penunjuk indeks yang selalu mengarah ke elemen paling atas di dalam tumpukan. Semua operasi push (tambah) dan pop (ambil) hanya terjadi pada pointer TOP ini.'
+      },
+      {
+        id: 'hs_stack_buffer',
+        label: 'Buffer Tumpukan Data LIFO',
+        x: 50,
+        y: 50,
+        details: 'Koleksi elemen yang disimpan secara berurutan. Elemen yang terakhir dimasukkan (Last In) akan menjadi elemen pertama yang dikeluarkan (First Out).'
+      },
+      {
+        id: 'hs_stack_sp',
+        label: 'Register Stack Pointer (SP) CPU',
+        x: 32,
+        y: 65,
+        details: 'Register khusus pada prosesor yang menyimpan alamat memori puncak stack saat ini selama pemanggilan sub-rutin fungsi program.'
+      },
+      {
+        id: 'hs_stack_overflow',
+        label: 'Batas Kapasitas & Stack Overflow',
+        x: 66,
+        y: 65,
+        details: 'Batas maksimal penyimpanan stack. Jika operasi push dipaksakan saat stack penuh, akan terjadi galat kritis Stack Overflow.'
+      }
+    ]
+  },
+  {
     id: 'c3d_hardware',
     title: 'Arsitektur Motherboard & Komponen Sistem Komputer',
     subtitle: 'Materi Kelas 10 · Sistem Komputer (SK)',
@@ -147,6 +223,78 @@ export const CONCEPTS_3D: Concept3D[] = [
 ];
 
 export const VIDEO_LESSONS: VideoLesson[] = [
+  // Kelas 7
+  {
+    id: 'vid_07_01',
+    title: 'Konsep Sistem Bilangan Digital: Biner, Oktal, Desimal & Heksadesimal',
+    duration: '16:30',
+    grade: '7',
+    topic: 'Sistem Bilangan & Representasi Data (SK)',
+    instructor: 'Ibu Siti Salamanah, S.Kom.',
+    description: 'Panduan lengkap memahami bagaimana komputer memproses logika 0 dan 1, nilai tempat kelipatan basis 2, 8, 10, dan 16, serta konversi langsung dengan metode modulo.',
+    videoUrl: 'https://www.youtube-nocookie.com/embed/LpuPe81bc2w',
+    thumbnail: '/src/assets/images/tik_computer_hardware_3d_1791939792442.jpg',
+    keyPoints: [
+      'Alasan komputer memakai biner (transistor On = 1, Off = 0).',
+      'Bobot nilai tempat pangkat 2 (128, 64, 32, 16, 8, 4, 2, 1).',
+      'Metode sisa pembagian berulang (modulo) dari desimal ke biner/oktal/hex.',
+      'Pengelompokan 3-bit untuk oktal dan 4-bit (nibble) untuk heksadesimal.'
+    ]
+  },
+  {
+    id: 'vid_07_02',
+    title: 'Latihan Cepat Konversi Bilangan Biner ke Heksadesimal & ASCII',
+    duration: '12:10',
+    grade: '7',
+    topic: 'Representasi Karakter Digital (SK)',
+    instructor: 'Ibu Siti Salamanah, S.Kom.',
+    description: 'Bagaimana teks, huruf, dan simbol diubah menjadi kode ASCII 7-bit dan representasi heksadesimal warna web.',
+    videoUrl: 'https://www.youtube-nocookie.com/embed/xwgFtw9U07w',
+    thumbnail: '/src/assets/images/tik_hero_concept_1791939790274.jpg',
+    keyPoints: [
+      'Tabel konversi heksadesimal 0-9 dan A-F (10-15).',
+      'Format kode warna RGB heksadesimal (#00FFFF, #FF00FF).',
+      'Standar kode ASCII huruf kapital A (65 desimal / 01000001 biner).',
+      'Trik cepat membaca biner tanpa kalkulator.'
+    ]
+  },
+
+  // Kelas 8
+  {
+    id: 'vid_08_01',
+    title: 'Struktur Data Stack (Tumpukan) & Prinsip LIFO',
+    duration: '19:40',
+    grade: '8',
+    topic: 'Algoritma & Struktur Data (AD)',
+    instructor: 'Ibu Siti Salamanah, S.Kom.',
+    description: 'Mengenal konsep dasar struktur data Stack, operasi Push (memasukkan), Pop (mengambil), Peek/Top (mengintip), isEmpty, dan penanganan Stack Overflow.',
+    videoUrl: 'https://www.youtube-nocookie.com/embed/bxRVz8zklWM',
+    thumbnail: '/src/assets/images/tik_hero_concept_1791939790274.jpg',
+    keyPoints: [
+      'Prinsip LIFO (Last In First Out) vs FIFO pada Antrean (Queue).',
+      'Mekanisme pointer TOP dan perubahan ukuran (size) stack.',
+      'Analogi tumpukan buku, fitur Ctrl+Z (Undo), dan riwayat browser.',
+      'Kondisi batas: isEmpty (stack kosong) dan isFull (overflow).'
+    ]
+  },
+  {
+    id: 'vid_08_02',
+    title: 'Penerapan Stack pada Operasi Hitung Notasi Postfix (RPN)',
+    duration: '21:15',
+    grade: '8',
+    topic: 'Algoritma Perhitungan Matematika (AD)',
+    instructor: 'Ibu Siti Salamanah, S.Kom.',
+    description: 'Cara kerja kalkulator komputer mengevaluasi ekspresi matematika tanpa tanda kurung menggunakan Notasi Polandia Terbalik (Reverse Polish Notation) dengan bantuan Stack.',
+    videoUrl: 'https://www.youtube-nocookie.com/embed/7ha78yWRDlE',
+    thumbnail: '/src/assets/images/tik_computer_hardware_3d_1791939792442.jpg',
+    keyPoints: [
+      'Perbedaan notasi Infix (A + B) vs Postfix (A B +).',
+      'Algoritma evaluasi Postfix: angka di-push, operator men-pop 2 nilai.',
+      'Menghindari kebingungan tanda kurung dalam kompilasi kode.',
+      'Latihan menghitung ekspresi matematika postfix langkah demi langkah.'
+    ]
+  },
+
   // Kelas 10
   {
     id: 'vid_10_01',
@@ -257,6 +405,90 @@ export const VIDEO_LESSONS: VideoLesson[] = [
 ];
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  // Kelas 7
+  {
+    id: 'q_07_1',
+    grade: '7',
+    topic: 'Konversi Biner ke Desimal',
+    question: 'Bilangan biner 1011(2) jika dikonversikan ke dalam bilangan desimal (basis 10) bernilai...',
+    options: ['9', '11', '13', '15'],
+    correctIndex: 1,
+    explanation: 'Perhitungan bobot bit: (1 × 2^3) + (0 × 2^2) + (1 × 2^1) + (1 × 2^0) = 8 + 0 + 2 + 1 = 11.',
+    points: 25
+  },
+  {
+    id: 'q_07_2',
+    grade: '7',
+    topic: 'Konversi Biner ke Heksadesimal',
+    question: 'Berapakah nilai heksadesimal (basis 16) dari bilangan biner 1111 0000(2)?',
+    options: ['F0', 'FF', '0F', 'E0'],
+    correctIndex: 0,
+    explanation: 'Pengelompokan 4-bit (nibble): 1111(2) bernilai 15 desimal yang disimbolkan "F", dan 0000(2) bernilai "0". Maka hasilnya adalah F0(16).',
+    points: 25
+  },
+  {
+    id: 'q_07_3',
+    grade: '7',
+    topic: 'Sistem Bilangan Oktal',
+    question: 'Sistem bilangan Oktal menggunakan basis 8 dengan simbol angka...',
+    options: ['0 sampai 7', '0 sampai 8', '1 sampai 8', '0 sampai 9 dan A-F'],
+    correctIndex: 0,
+    explanation: 'Sistem bilangan oktal berbasis 8, sehingga hanya memiliki 8 digit unik yaitu: 0, 1, 2, 3, 4, 5, 6, dan 7.',
+    points: 25
+  },
+  {
+    id: 'q_07_4',
+    grade: '7',
+    topic: 'Metode Pembagian Modulo',
+    question: 'Jika bilangan desimal 25 dikonversikan ke biner dengan metode pembagian berulang dibagi 2, berapakah hasil pembacaan sisa dari bawah ke atas?',
+    options: ['11001', '10011', '11010', '10101'],
+    correctIndex: 0,
+    explanation: '25/2=12 sisa 1; 12/2=6 sisa 0; 6/2=3 sisa 0; 3/2=1 sisa 1; 1/2=0 sisa 1. Dibaca dari bawah ke atas: 11001(2).',
+    points: 25
+  },
+
+  // Kelas 8
+  {
+    id: 'q_08_1',
+    grade: '8',
+    topic: 'Definisi Struktur Data Stack',
+    question: 'Struktur data Stack bekerja berdasarkan prinsip LIFO. Kepanjangan dari LIFO adalah...',
+    options: ['Last In First Out', 'Low Input Fast Output', 'Last In Final Order', 'Linear Indexed File Output'],
+    correctIndex: 0,
+    explanation: 'LIFO (Last In First Out) berarti elemen yang paling terakhir dimasukkan ke dalam tumpukan adalah elemen yang pertama kali akan diambil atau dikeluarkan.',
+    points: 25
+  },
+  {
+    id: 'q_08_2',
+    grade: '8',
+    topic: 'Operasi Dasar Stack',
+    question: 'Operasi untuk menyisipkan elemen baru ke puncak tumpukan (TOP) dan operasi untuk mengambil elemen teratas berturut-turut dinamakan...',
+    options: ['Push dan Pop', 'Enqueue dan Dequeue', 'Insert dan Delete', 'Peek dan Clear'],
+    correctIndex: 0,
+    explanation: 'Push bertugas memasukkan elemen baru ke TOP stack, sedangkan Pop bertugas menghapus sekaligus mengembalikan elemen yang berada di posisi TOP.',
+    points: 25
+  },
+  {
+    id: 'q_08_3',
+    grade: '8',
+    topic: 'Analisis Alur Stack & TOP Pointer',
+    question: 'Sebuah stack kosong dikenakan operasi: push(10), push(20), push(30), lalu pop(). Berapakah nilai yang terambil dan nilai TOP saat ini?',
+    options: ['Terambil 30, TOP bernilai 20', 'Terambil 10, TOP bernilai 20', 'Terambil 30, TOP bernilai 10', 'Terambil 20, TOP bernilai 30'],
+    correctIndex: 0,
+    explanation: 'Elemen 30 adalah yang terakhir masuk. Ketika pop() dipanggil, 30 dikeluarkan. Elemen tepat di bawahnya yaitu 20 kini menjadi TOP stack.',
+    points: 25
+  },
+  {
+    id: 'q_08_4',
+    grade: '8',
+    topic: 'Penerapan Stack pada Notasi Postfix',
+    question: 'Evaluasi hasil perhitungan ekspresi aritmatika Postfix: "4 5 + 3 *". Berapakah hasil akhirnya?',
+    options: ['27', '19', '17', '35'],
+    correctIndex: 0,
+    explanation: 'Langkah: Push 4, push 5. Temu "+", pop 5 dan 4, hitung 4 + 5 = 9, push 9. Push 3. Temu "*", pop 3 dan 9, hitung 9 * 3 = 27. Hasil akhir = 27.',
+    points: 25
+  },
+
   // Kelas 10
   {
     id: 'q_10_1',
@@ -390,6 +622,34 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
 ];
 
 export const INITIAL_ASSIGNMENTS: Assignment[] = [
+  {
+    id: 'asg_07_01',
+    grade: '7',
+    title: 'Praktikum Konversi Sistem Bilangan Biner, Oktal & Heksadesimal',
+    topic: 'Sistem Bilangan & Bit Register (SK)',
+    deadline: '2026-10-24 23:59',
+    totalPoints: 100,
+    instructions: '1. Gunakan Simulator Konverter Biner belajarBarengSitty untuk menguji saklar bit biner.\n2. Lakukan konversi bilangan desimal tanggal lahir Anda ke Biner, Oktal, dan Heksadesimal menggunakan metode sisa pembagian (modulo).\n3. Tuliskan langkah pembagian bertingkat beserta pembacaan sisa dari bawah ke atas dan lampirkan hasil ringkasan.',
+    rubric: [
+      { criteria: 'Kebenaran hasil konversi ke 3 basis', maxScore: 40 },
+      { criteria: 'Kelengkapan alur langkah pembagian modulo', maxScore: 35 },
+      { criteria: 'Kerapian dokumentasi tugas', maxScore: 25 }
+    ]
+  },
+  {
+    id: 'asg_08_01',
+    grade: '8',
+    title: 'Eksplorasi Simulasi Operasi Stack & Evaluasi Notasi Postfix',
+    topic: 'Struktur Data Stack & LIFO (AD)',
+    deadline: '2026-10-26 23:59',
+    totalPoints: 100,
+    instructions: '1. Buka Simulator Stack belajarBarengSitty dan lakukan operasi bertahap: Push 4 elemen angka, lakukan Pop 2 kali, dan catat kondisi TOP serta status isEmpty().\n2. Uji evaluasi ekspresi aritmatika Postfix: "12 4 / 3 + 2 *" pada simulator perhitungan stack.\n3. Catat isi stack pada setiap token operator dan jelaskan mengapa prinsip LIFO sangat penting dalam komputasi.',
+    rubric: [
+      { criteria: 'Simulasi operasi Push/Pop & status TOP', maxScore: 35 },
+      { criteria: 'Alur evaluasi ekspresi Postfix tepat', maxScore: 45 },
+      { criteria: 'Kesimpulan prinsip LIFO dan kerapian laporan', maxScore: 20 }
+    ]
+  },
   {
     id: 'asg_10_01',
     grade: '10',
@@ -596,6 +856,30 @@ export const INITIAL_LEADERBOARD: LeaderboardEntry[] = [
     quizzesCompleted: 6,
     tasksCompleted: 5,
     badgeCount: 3
+  },
+  {
+    rank: 8,
+    id: 'usr_lead_08',
+    name: 'Alif Danendra',
+    grade: '8',
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&auto=format&fit=crop&q=80',
+    xp: 1480,
+    streakDays: 9,
+    quizzesCompleted: 8,
+    tasksCompleted: 5,
+    badgeCount: 4
+  },
+  {
+    rank: 9,
+    id: 'usr_lead_09',
+    name: 'Kirana Putri Dewi',
+    grade: '7',
+    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&auto=format&fit=crop&q=80',
+    xp: 1390,
+    streakDays: 12,
+    quizzesCompleted: 7,
+    tasksCompleted: 4,
+    badgeCount: 4
   }
 ];
 

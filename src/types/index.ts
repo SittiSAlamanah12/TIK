@@ -1,4 +1,4 @@
-export type GradeLevel = '10' | '11' | '12';
+export type GradeLevel = '7' | '8' | '10' | '11' | '12';
 
 export type UserRole = 'siswa' | 'guru';
 
